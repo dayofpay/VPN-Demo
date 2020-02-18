@@ -1,0 +1,85 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace APIConnector
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Title = "StormVPN / Dev by dayofpay";
+            Console.ForegroundColor = ConsoleColor.Blue;
+            string Germany = "93.190.253.50"; // Germany Proxy
+            string ssh = "yourssh"; // YOUR VPS
+            string sshpass = "yoursshpass" // YOUR VPS PASS
+            string method = "TCP" // Method-()
+            string France = "87.98.181.95"; // France Proxy
+            string Bulgaria = "78.130.145.167"; // Bulgarian Proxy
+            string validapi = "dZs982w8svkS9298"; // API KEY // api.dayofpay.pw
+            string systemuser = "root"; // Host Username
+            Console.WriteLine("Please Enter Your API Key: ");
+            var apikey = Console.ReadLine();
+            if (apikey == validapi)
+            {
+                Console.Title = "StormVPN / Select Country";
+                Console.Clear();
+                Console.WriteLine("Welcome again , " + systemuser);
+                Console.WriteLine("###############################");
+                Console.WriteLine("Choose Country:               #");
+                Console.WriteLine("###############################");
+                Console.WriteLine("1. France");
+                Console.WriteLine("2. Germany");
+                Console.WriteLine("3. Bulgaria");
+                Console.Write("> ");
+                var selectproxy = Console.ReadLine();
+                Console.Clear();
+                if (selectproxy == "France")
+                {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine("Connecting to FRANCE#29...");
+                    System.Threading.Thread.Sleep(5000);
+                    Console.Title = "Connected to France#29";
+                    Console.WriteLine("Connected to France#29");
+                    Console.WriteLine("###############################");
+                    Console.WriteLine("IP : {0}",France);
+                    Console.WriteLine("###############################");
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.WriteLine("To stop the VPN, please press CTRL + C");
+                    var quit3 = Console.ReadLine();
+                }
+                if (selectproxy == "Germany")
+                {
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.WriteLine("Connecting to GERMANY#11...");
+                    System.Threading.Thread.Sleep(5000);
+                    Console.Title = "Connected to Germany#11";
+                    Console.WriteLine("Connected to Germany#11");
+                    Console.WriteLine("###############################");
+                    Console.WriteLine("IP : {0}",Germany);
+                    Console.WriteLine("###############################");
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Console.WriteLine("To stop the VPN, please press CTRL + C");
+                    var quit2 = Console.ReadLine();
+                }
+                if (selectproxy == "Bulgaria")
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Connecting to BULGARIA#1...");
+                    System.Threading.Thread.Sleep(5000);
+                    Console.Title = "Connected to Bulgaria#1";
+                    Console.WriteLine("Connected to Bulgaria#1");
+                    Console.WriteLine("###############################");
+                    Console.WriteLine("IP : {0}", Bulgaria);
+                    Console.WriteLine("###############################");
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    Console.WriteLine("To stop the VPN, please press CTRL + C");
+                    var quit1 = Console.ReadLine();
+                }
+            }
+        }
+    }
+}
+// END , THANKS FOR USING MY TOOL , CREATED BY DAYOFPAY //
